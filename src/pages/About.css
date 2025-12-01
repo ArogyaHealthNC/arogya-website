@@ -1,0 +1,273 @@
+.about-page {
+  line-height: 1.6;
+  color: var(--neutral-800);
+}
+
+.about-page section {
+  padding: var(--space-12) var(--space-4);
+}
+
+/* Hero Section */
+.about-page .hero-section {
+  background: var(--primary-600);
+  color: white;
+  padding: var(--space-16) var(--space-4) var(--space-12);
+  text-align: center;
+}
+
+.about-page .hero-section h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  margin: 0;
+}
+
+/* Mission Section */
+.about-page .mission-section {
+  background: var(--bg-secondary);
+}
+
+.about-page .mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-page .mission-statement {
+  font-size: var(--text-xl);
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+  color: var(--neutral-800);
+}
+
+/* Section Headers */
+.about-page .philosophy-section h2,
+.about-page .origin-section h2,
+.about-page .instructor-section h2,
+.about-page .physicians-section h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-8);
+  color: var(--neutral-900);
+}
+
+/* Philosophy Section */
+.about-page .philosophy-content,
+.about-page .origin-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-page .philosophy-content p,
+.about-page .origin-content p {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+  color: var(--neutral-700);
+  line-height: 1.7;
+}
+
+/* Origin Section */
+.about-page .origin-section {
+  background: var(--bg-secondary);
+}
+
+.about-page .founder-quote {
+  font-size: var(--text-xl);
+  font-style: italic;
+  margin: var(--space-8) 0;
+  padding: var(--space-6);
+  border-left: 4px solid var(--primary-600);
+  background: white;
+  color: var(--neutral-800);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* Instructor Section */
+.about-page .instructor-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-10);
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-page .image-placeholder {
+  aspect-ratio: 3/4;
+  background: var(--primary-600);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: var(--text-lg);
+}
+
+.about-page .instructor-bio {
+  padding-top: var(--space-4);
+}
+
+.about-page .credentials {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--primary-600);
+  margin-bottom: var(--space-6);
+}
+
+.about-page .instructor-bio p {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+  color: var(--neutral-700);
+  line-height: 1.7;
+}
+
+.about-page .certifications {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.about-page .cert-badge {
+  background: var(--primary-600);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+}
+
+/* Physicians Section */
+.about-page .physicians-section {
+  background: var(--bg-secondary);
+}
+
+.about-page .physicians-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-page .physicians-content > p {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+  color: var(--neutral-700);
+  line-height: 1.7;
+}
+
+.about-page .trust-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.about-page .trust-badge {
+  background: white;
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.about-page .badge-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--primary-100);
+  color: var(--primary-600);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+}
+
+.about-page .trust-badge h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-2);
+  color: var(--neutral-900);
+}
+
+.about-page .trust-badge p {
+  font-size: var(--text-base);
+  color: var(--neutral-600);
+  margin: 0;
+}
+
+/* CTA Section */
+.about-page .cta-section {
+  background: var(--primary-600);
+  color: white;
+  text-align: center;
+}
+
+.about-page .cta-content h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-4);
+}
+
+.about-page .cta-content p {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-8);
+  opacity: 0.95;
+}
+
+.about-page .cta-button {
+  background: white;
+  color: var(--primary-600);
+  border: none;
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.about-page .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .about-page section {
+    padding: var(--space-16) var(--space-4);
+  }
+
+  .about-page .hero-section {
+    padding: var(--space-20) var(--space-4) var(--space-16);
+  }
+
+  .about-page .hero-section h1 {
+    font-size: var(--text-5xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page .hero-section h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .about-page .philosophy-section h2,
+  .about-page .origin-section h2,
+  .about-page .instructor-section h2,
+  .about-page .physicians-section h2,
+  .about-page .cta-content h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .about-page .mission-statement {
+    font-size: var(--text-lg);
+  }
+
+  .about-page .instructor-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .about-page .trust-badges {
+    grid-template-columns: 1fr;
+  }
+}

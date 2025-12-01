@@ -1,0 +1,65 @@
+.physician-support {
+  padding: 5rem 0;
+  background-color: var(--bg-accent-warm);
+  text-align: center;
+}
+
+.physician-statement {
+  font-size: var(--font-size-lg);
+  color: var(--neutral-700);
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trust-badges {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trust-badge {
+  text-align: center;
+}
+
+.trust-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.trust-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-900);
+  margin-bottom: 0.75rem;
+}
+
+.trust-description {
+  font-size: var(--font-size-base);
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .trust-badges {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .physician-support {
+    padding: 6rem 0;
+  }
+}

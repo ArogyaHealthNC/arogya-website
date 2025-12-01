@@ -1,0 +1,163 @@
+.join-program {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--neutral-white) 100%);
+}
+
+.value-statement {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--neutral-700);
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.join-benefits {
+  background-color: var(--neutral-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.benefits-heading {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-900);
+  margin-bottom: 1.5rem;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-base);
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+.benefit-icon {
+  color: var(--success-600);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.trust-indicators {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--neutral-200);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.trust-indicator-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.trust-check {
+  color: var(--primary-600);
+  font-weight: var(--font-weight-bold);
+}
+
+.join-form {
+  background-color: var(--neutral-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 3rem;
+}
+
+.join-submit {
+  width: 100%;
+}
+
+.what-to-expect {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Success state */
+.success-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--success-600);
+  color: var(--neutral-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 2rem;
+}
+
+.success-state h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--neutral-900);
+  margin-bottom: 1rem;
+}
+
+.success-state .what-to-expect {
+  font-size: var(--font-size-base);
+  margin-top: 1.5rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .join-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .join-benefits,
+  .join-form {
+    padding: 2.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .join-program {
+    padding: 6rem 0;
+  }
+}

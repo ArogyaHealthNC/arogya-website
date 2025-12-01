@@ -1,0 +1,76 @@
+.email-capture {
+  padding: 5rem 0;
+  background-color: var(--bg-accent);
+}
+
+.email-capture-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead-magnet-info {
+  margin-bottom: 3rem;
+}
+
+.lead-magnet-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-900);
+  margin: 1.5rem 0 1rem;
+}
+
+.lead-magnet-value {
+  font-size: var(--font-size-lg);
+  color: var(--neutral-700);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.social-proof {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.email-capture-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.email-capture-submit {
+  width: 100%;
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--success-50);
+  color: var(--success-700);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+}
+
+.privacy-assurance {
+  margin-top: 1rem;
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .email-capture {
+    padding: 6rem 0;
+  }
+
+  .lead-magnet-title {
+    font-size: var(--font-size-3xl);
+  }
+}

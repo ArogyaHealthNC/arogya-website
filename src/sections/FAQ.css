@@ -1,0 +1,22 @@
+.faq {
+  padding: 5rem 0;
+  background-color: var(--neutral-50);
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 3rem auto 2rem;
+}
+
+.faq-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .faq {
+    padding: 6rem 0;
+  }
+}

@@ -1,0 +1,138 @@
+.community {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+/* Community Photo */
+.community-photo {
+  margin-bottom: 3rem;
+}
+
+.community-photo-placeholder {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+  background: var(--primary-100);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  color: var(--primary-600);
+}
+
+.community-photo-placeholder .photo-icon {
+  opacity: 0.6;
+}
+
+.community-photo-placeholder span {
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  opacity: 0.8;
+}
+
+.community-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.community-tagline {
+  font-size: var(--font-size-lg);
+  color: var(--primary-600);
+  font-weight: var(--font-weight-medium);
+  margin-top: 1rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.testimonial-card {
+  padding: 2rem;
+}
+
+.testimonial-quote {
+  font-size: var(--font-size-lg);
+  color: var(--neutral-800);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-600);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.community-message {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+.community-message p {
+  margin-bottom: 1rem;
+}
+
+.community-message p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .community {
+    padding: 6rem 0;
+  }
+
+  .stat-value {
+    font-size: var(--font-size-4xl);
+  }
+}

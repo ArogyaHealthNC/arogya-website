@@ -1,0 +1,144 @@
+.sample-week {
+  padding: 5rem 0;
+  background-color: var(--bg-accent);
+}
+
+.sample-week-intro {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--neutral-700);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.schedule-card {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.schedule-indicator {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: var(--font-size-2xl);
+}
+
+.schedule-indicator-exercise {
+  color: var(--primary-600);
+}
+
+.schedule-indicator-lifestyle {
+  color: var(--secondary-600);
+}
+
+.schedule-day {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.schedule-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-900);
+  margin-bottom: 0.5rem;
+}
+
+.schedule-time {
+  font-size: var(--font-size-base);
+  color: var(--neutral-600);
+  margin-bottom: 0.25rem;
+}
+
+.schedule-topic {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  font-style: italic;
+}
+
+.schedule-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: var(--font-size-sm);
+  color: var(--neutral-700);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-indicator {
+  font-size: var(--font-size-xl);
+}
+
+.legend-indicator.exercise {
+  color: var(--primary-600);
+}
+
+.legend-indicator.lifestyle {
+  color: var(--secondary-600);
+}
+
+.sample-week-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--primary-600);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
+}
+
+.link-button:hover {
+  color: var(--primary-700);
+  text-decoration: underline;
+}
+
+.link-button:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .sample-week {
+    padding: 6rem 0;
+  }
+
+  .schedule-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
