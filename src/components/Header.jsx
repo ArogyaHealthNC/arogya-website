@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Header.css';
 
@@ -35,7 +36,7 @@ const Header = ({
       className={`header ${isScrolled ? 'header-scrolled' : ''} ${className}`.trim()}
     >
       <div className="header-container">
-        <div className="header-logo">
+        <Link to="/" className="header-logo">
           {logo ? (
             typeof logo === 'string' ? (
               <img src={logo} alt={logoAlt} className="logo-image" />
@@ -45,19 +46,19 @@ const Header = ({
           ) : (
             <span className="logo-text">{logoAlt}</span>
           )}
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="header-nav" aria-label="Main navigation">
           <ul className="nav-list">
             {navLinks.map((link, index) => (
               <li key={index} className="nav-item">
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   className={`nav-link ${link.active ? 'nav-link-active' : ''}`}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -101,13 +102,13 @@ const Header = ({
             <ul className="mobile-nav-list">
               {navLinks.map((link, index) => (
                 <li key={index} className="mobile-nav-item">
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className={`mobile-nav-link ${link.active ? 'mobile-nav-link-active' : ''}`}
                     onClick={closeMobileMenu}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

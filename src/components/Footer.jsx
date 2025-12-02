@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Footer.css';
 
@@ -45,7 +46,7 @@ const Footer = ({
         <div className="footer-top">
           {/* Brand Column */}
           <div className="footer-brand">
-            <div className="footer-logo">
+            <Link to="/" className="footer-logo">
               {logo ? (
                 typeof logo === 'string' ? (
                   <img src={logo} alt={logoAlt} className="footer-logo-image" />
@@ -55,7 +56,7 @@ const Footer = ({
               ) : (
                 <span className="footer-logo-text">{logoAlt}</span>
               )}
-            </div>
+            </Link>
             <p className="footer-tagline">{tagline}</p>
             {contactEmail && (
               <a href={`mailto:${contactEmail}`} className="footer-email">
@@ -72,9 +73,9 @@ const Footer = ({
                 <ul className="footer-nav-list">
                   {navLinks.map((link, index) => (
                     <li key={index}>
-                      <a href={link.href} className="footer-nav-link">
+                      <Link to={link.href} className="footer-nav-link">
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -153,9 +154,9 @@ const Footer = ({
               <ul className="footer-legal-links">
                 {legalLinks.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="footer-legal-link">
+                    <Link to={link.href} className="footer-legal-link">
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
