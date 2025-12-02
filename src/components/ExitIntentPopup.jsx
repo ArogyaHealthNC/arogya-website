@@ -6,14 +6,17 @@
  * Content: Email capture form with lead magnet offer
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { X, Gift } from 'lucide-react';
 import { submitEmailCapture } from '../services/forms';
 import './ExitIntentPopup.css';
 
 function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false);
-  const [hasTriggered, setHasTriggered] = useState(false);
+  // Initialize hasTriggered based on sessionStorage to avoid useEffect setState
+  const [hasTriggered, setHasTriggered] = useState(() => {
+    return sessionStorage.getItem('exitPopupDismissed') === 'true';
+  });
   const [formData, setFormData] = useState({ firstName: '', email: '' });
   const [formStatus, setFormStatus] = useState({
     loading: false,
@@ -21,14 +24,6 @@ function ExitIntentPopup() {
     error: null,
   });
   const [errors, setErrors] = useState({});
-
-  // Check if popup was already dismissed this session
-  useEffect(() => {
-    const dismissed = sessionStorage.getItem('exitPopupDismissed');
-    if (dismissed) {
-      setHasTriggered(true);
-    }
-  }, []);
 
   // Desktop: Mouse leave detection
   const handleMouseLeave = useCallback(
@@ -99,7 +94,7 @@ function ExitIntentPopup() {
       setTimeout(() => {
         handleClose();
       }, 3000);
-    } catch (error) {
+    } catch {
       setFormStatus({
         loading: false,
         success: false,

@@ -13,7 +13,6 @@ const SessionCard = ({
 }) => {
   const sessionClass = `session-card session-card-${type} ${className}`.trim();
   const isExercise = type === 'exercise';
-  const isLifestyle = type === 'lifestyle';
 
   return (
     <div className={sessionClass}>

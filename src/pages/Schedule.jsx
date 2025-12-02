@@ -72,8 +72,7 @@ function adjustTime(baseTime, offsetDiff) {
 }
 
 // Generate ICS calendar data
-function generateICS(session, date, timezone) {
-  const tzLabel = timezones.find((tz) => tz.value === timezone)?.label || 'ET';
+function generateICS(session, date) {
   const sessionDate = new Date(date);
 
   // Parse the time
@@ -112,7 +111,7 @@ function Schedule() {
   const [selectedTimezone, setSelectedTimezone] = useState('America/New_York');
 
   // Base schedule template (times in ET)
-  const baseScheduleTemplate = {
+  const baseScheduleTemplate = useMemo(() => ({
     Monday: [
       {
         type: 'exercise',
@@ -157,7 +156,7 @@ function Schedule() {
     ],
     Saturday: [],
     Sunday: [],
-  };
+  }), []);
 
   // Generate weekly schedule based on current week
   const weeklySchedule = useMemo(() => {
@@ -182,7 +181,7 @@ function Schedule() {
         sessions,
       };
     });
-  }, [currentWeekStart, selectedTimezone]);
+  }, [currentWeekStart, selectedTimezone, baseScheduleTemplate]);
 
   const navigateWeek = (direction) => {
     const newWeekStart = new Date(currentWeekStart);
@@ -214,7 +213,7 @@ function Schedule() {
   }, [currentWeekStart]);
 
   const handleAddToCalendar = (session, day) => {
-    const icsContent = generateICS(session, day.fullDate, selectedTimezone);
+    const icsContent = generateICS(session, day.fullDate);
     const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -274,8 +273,6 @@ ${events}END:VCALENDAR`;
   const handleJoinClick = () => {
     navigate('/join');
   };
-
-  const selectedTzLabel = timezones.find((tz) => tz.value === selectedTimezone)?.label || 'ET';
 
   return (
     <div className="schedule-page">

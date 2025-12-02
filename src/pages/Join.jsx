@@ -103,7 +103,7 @@ function Join() {
     try {
       await submitRegistrationForm(formData);
       setFormStatus({ submitted: true, loading: false, error: null });
-    } catch (error) {
+    } catch {
       setFormStatus({
         submitted: false,
         loading: false,

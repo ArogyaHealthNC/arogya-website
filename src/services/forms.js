@@ -20,7 +20,7 @@ export const submitRegistrationForm = async (data) => {
 
   console.log('Registration form submitted:', data);
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       // Simulate successful submission
       resolve({
@@ -45,7 +45,7 @@ export const submitEmailCapture = async (data) => {
 
   console.log('Email capture form submitted:', data);
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
         success: true,
@@ -69,7 +69,7 @@ export const submitContactForm = async (data) => {
 
   console.log('Contact form submitted:', data);
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
         success: true,
@@ -89,7 +89,7 @@ export const submitNewsletterForm = async (email) => {
 
   console.log('Newsletter form submitted:', email);
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
         success: true,
